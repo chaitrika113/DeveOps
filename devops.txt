@@ -111,7 +111,12 @@ git remote add origin https://github.com/SeiaShibu/maven123.git
 git push -u origin main
 git remote set-url origin 
 
-go to: https://github.com/settings/tokens  
+go to: https://github.com/settings/tokens 
 
-https://chaitrika112:github_pat11BFEKM4Q0XQekiiSwzjyk_Vhya1RZjy9U5yGOsy4651RLZiuY528yVdXl3l8wbf4N2VZLLIOD53chT0RI@github.com/chaitrika113/maven11.git
+
+git remote set-url origin https://github.com/chaitrika113/mav.git
+git config --global credential.helper store
+git push --set-upstream origin main
+ghp_    BL9fIiLDjSvzC0voX5vC2UvOUZOW8D1KYIlN
+
 --------------------------------------------------------------------------------------------------
