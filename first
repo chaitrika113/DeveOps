@@ -1,0 +1,64 @@
+.......................1st program........................................
+mvn archetype:generate -DgroupId=com.example -DartifactId=MyMavenApp - 
+DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+inside pom file
+<build>
+    <plugins>
+      <!-- Compiler plugin for Java 17 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+
+      <!-- Surefire plugin to run JUnit 5 tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${surefire.plugin.version}</version>
+        <configuration>
+          <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+maven compile 
+maven test
+maven package
+
+to run and get output:java -cp target/classes com.example.App
+
+................................................2nd prgm................................
+wget https://services -gradle.org/didtributions/gradle-8.7-bin.zip
+
+unzip -o gradle -8.7 -bin-zip-d-/gradle
+
+export PATH=$PATH:$HOME/gradle/gradle-8.7/bin
+
+inside the build file:
+task hello{
+   doLast{
+           println'Hello World!"
+}
+}
+
+then make one directory
+go inside the directory
+
+gradle init --type -java-application --dsl groovy
+
+then tree
+
+gradle build.
+gradle run.
+gradle hello.
+.........................................3rd prgm........................................
+
+same as above inside the maven project is 3rd one
+
