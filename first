@@ -5,28 +5,25 @@ DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 inside pom file
 <build>
     <plugins>
-      <!-- Compiler plugin for Java 17 -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-        </configuration>
-      </plugin>
+        <!-- Surefire Plugin -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M9</version>
+        </plugin>
 
-      <!-- Surefire plugin to run JUnit 5 tests -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${surefire.plugin.version}</version>
-        <configuration>
-          <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
-        </configuration>
-      </plugin>
+        <!-- Compiler Plugin -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Use a newer version -->
+            <configuration>
+                <source>1.8</source>   <!-- Or use 17 if your JDK supports it -->
+                <target>1.8</target>
+            </configuration>
+        </plugin>
     </plugins>
-  </build>
+</build>
 
 maven compile 
 maven test
